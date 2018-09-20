@@ -10,6 +10,15 @@
                 </div>
 
                 <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-md-12 text-right">
+                            <a href="{{ route('nuevo-post') }}" class="btn btn-primary">Crear un post</a>
+                        </div>
+                    </div>
+
+                    <hr>
+
                     <div class="table-responsive">
                         
                         <table class="table table-striped table-hover">
