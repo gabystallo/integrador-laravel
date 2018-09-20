@@ -14,3 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/admin/home', 'HomeController@index')->name('home');
+
+Route::get('/admin/posts', 'AdminPosts@index')->name('lista-posts');
+Route::get('/admin/posts/nuevo', 'AdminPosts@nuevo')->name('nuevo-post');
+Route::post('/admin/posts/nuevo', 'AdminPosts@crear');
+Route::get('/admin/posts/{post}/editar', 'AdminPosts@editar')->name('editar-post');
+Route::put('/admin/posts/{post}/editar', 'AdminPosts@guardar');
+Route::delete('/admin/posts/{post}/eliminar', 'AdminPosts@eliminar')->name('eliminar-post');
+
+
+
+
+
