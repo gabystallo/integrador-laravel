@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
@@ -27,6 +24,6 @@ Route::put('/admin/posts/{post}/editar', 'AdminPosts@guardar');
 Route::delete('/admin/posts/{post}/eliminar', 'AdminPosts@eliminar')->name('eliminar-post');
 
 
-
+Route::get('/', 'Front@home');
 
 

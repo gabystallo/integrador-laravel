@@ -1,0 +1,136 @@
+* { margin:0; padding:0; }
+div, article { box-sizing:border-box; }
+body { font-family:sans-serif; font-size:14px; background-color:#eee; }
+a { text-decoration:none; }
+
+#contenedor-general {
+	max-width:1100px;
+	margin:0 auto;
+	background-color:white;
+}
+
+header {
+	padding:30px 0;
+	text-align:center;
+	border-bottom:3px solid #ddd;
+
+}
+
+header h1 {
+	font-size:40px;
+}
+
+.menu {
+	background-color:deepskyblue;
+	padding:15px 0;
+	margin-bottom:20px;
+}
+
+.menu ul {
+	display:flex;
+	justify-content:center;
+}
+
+.menu li {
+	flex-basis:0; flex-grow:1;
+	padding:0 10px;
+	text-align:center;
+	list-style:none;
+}
+
+.menu li a {
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.menu li a:hover {
+	text-decoration:underline;
+}
+
+.posts {
+	max-width:95%;
+	margin:0 auto;
+}
+
+.posts h2 {
+	font-size:30px;
+	margin-bottom:15px;
+}
+
+.posts .lista {
+	font-size:0;
+}
+
+.posts .post {
+	display:inline-block;
+	width:33%;
+	vertical-align:top;
+	padding:10px;
+}
+
+.posts .post .contenido {
+	border:1px solid #ddd;
+	padding:5px;
+	position:relative;
+}
+
+.posts .post .contenido h3 {
+	font-size:20px;
+	margin-bottom:10px;
+}
+
+.posts .post .contenido p {
+	font-size:14px;
+}
+
+.posts .post .contenido .autor {
+	font-size:14px;
+	color:red;
+	margin-top:5px;
+}
+
+.posts .post .contenido a.cover {
+	position:absolute; display:block;
+	top:0; left:0; right:0; bottom:0;
+	background-color:#fff; opacity:0; z-index:900;
+}
+
+.posts .post .contenido a.cover:hover {
+	opacity:0.5;
+}
+
+footer {
+	margin-top:20px;
+	padding:20px 0;
+	background-color:#eee;
+}
+
+footer::after {
+	content:'';
+	display:block;
+	clear:both;
+}
+
+footer .columna {
+	width:50%;
+	font-size:12px;
+	padding:0 20px;
+}
+
+footer .columna:first-child {
+	float:left;
+}
+
+footer .columna:last-child {
+	float:right;
+	text-align:right;
+}
+
+footer a {
+	color:blue;
+}
+
+footer a:hover {
+	text-decoration:underline;
+}
