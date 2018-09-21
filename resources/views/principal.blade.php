@@ -9,7 +9,7 @@
 				<div class="contenido">
 					<h3>{{ $post->titulo }}</h3>
 					@if($post->foto)
-						<img src="/storage/posts/fotos/{{ $post->foto }}">
+						<div class="foto" style="background-image:url(/storage/posts/fotos/{{ $post->foto }});"></div>
 					@endif
 					<p>{{ $post->bajada }}</p>
 					<div class="autor">Por {{ $post->autor->name }}</div>

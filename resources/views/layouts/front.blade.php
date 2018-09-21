@@ -3,6 +3,7 @@
 <head>
 	<title>Blog</title>
 	<link rel="stylesheet" type="text/css" href="/css/estilo.css">
+	<meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
 </head>
 <body>
 

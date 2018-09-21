@@ -100,9 +100,11 @@ header h1 {
 	opacity:0.5;
 }
 
-.posts .post .contenido img {
-	width:100%;
-	margin:5px 0;
+.posts .post .contenido .foto {
+	height:180px;
+	background-size:cover;
+	background-position:center center;
+	background-repeat:no-repeat;
 }
 
 footer {
@@ -160,6 +162,36 @@ footer a:hover {
 .pagination li a {
 	color:black;
 }
+
 .pagination li a:hover {
 	color:blue;
+}
+
+
+@media (max-width:600px) {
+
+	.menu {
+		padding:0;
+	}
+
+	.menu ul {
+		display:flex;
+		flex-direction:column;
+	}
+
+	.menu li {
+		width:100%;
+		padding:10px 0;
+		border-bottom:1px solid blue;
+	}
+
+	.menu li:last-child {
+		border-bottom:0;
+	}
+
+
+	.posts .post {
+		display:block;
+		width:100%;
+	}
 }
