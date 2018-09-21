@@ -64,7 +64,7 @@ header h1 {
 
 .posts .post {
 	display:inline-block;
-	width:33%;
+	width:33.33%;
 	vertical-align:top;
 	padding:10px;
 }
@@ -103,7 +103,7 @@ header h1 {
 footer {
 	margin-top:20px;
 	padding:20px 0;
-	background-color:#eee;
+	background-color:#ddd;
 }
 
 footer::after {
@@ -133,4 +133,28 @@ footer a {
 
 footer a:hover {
 	text-decoration:underline;
+}
+
+
+.pagination {
+	text-align:center;
+	margin:10px 0;
+}
+
+.pagination li {
+	display:inline-block;
+	list-style:none;
+	padding:0 6px;
+	font-size:20px;
+}
+
+.pagination li.active {
+	color:red;
+}
+
+.pagination li a {
+	color:black;
+}
+.pagination li a:hover {
+	color:blue;
 }

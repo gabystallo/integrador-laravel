@@ -25,5 +25,6 @@ Route::delete('/admin/posts/{post}/eliminar', 'AdminPosts@eliminar')->name('elim
 
 
 Route::get('/', 'Front@home');
+Route::get('/posts/{post}', 'Front@verPost')->name('ver-post');
 
 
