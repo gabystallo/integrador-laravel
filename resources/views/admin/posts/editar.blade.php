@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="panel-body">
-                    <form method="post">
+                    <form method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         {{ method_field('put') }}
                         <div class="row">

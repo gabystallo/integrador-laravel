@@ -8,6 +8,9 @@
 			<article class="post">
 				<div class="contenido">
 					<h3>{{ $post->titulo }}</h3>
+					@if($post->foto)
+						<img src="/storage/posts/fotos/{{ $post->foto }}">
+					@endif
 					<p>{{ $post->bajada }}</p>
 					<div class="autor">Por {{ $post->autor->name }}</div>
 					<a href="{{ route('ver-post', compact('post')) }}" class="cover"></a>

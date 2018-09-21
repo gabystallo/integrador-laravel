@@ -13,6 +13,14 @@
     <input type="text" name="titulo" class="form-control" value="{{ old('titulo', $post->titulo) }}">
 </div>
 
+<div class="col-md-6 form-group">
+    <label>Foto</label>
+    @if($post->foto)
+        <img src="/storage/posts/fotos/{{ $post->foto }}" width="100%">
+    @endif
+    <input type="file" name="foto" class="form-control">
+</div>
+
 <div class="col-md-12 form-group">
     <label>Bajada</label>
     <textarea name="bajada" class="form-control">{{ old('bajada', $post->bajada) }}</textarea>

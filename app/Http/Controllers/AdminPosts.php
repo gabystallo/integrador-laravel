@@ -36,6 +36,7 @@ class AdminPosts extends Controller
                 'titulo' => 'required|max:100',
                 'bajada' => 'required',
                 'texto' => 'required',
+                'foto' => 'nullable|image'
             ]
         );
 
@@ -44,6 +45,14 @@ class AdminPosts extends Controller
 
         $usuario = Auth::user();
         $usuario->posts()->save($post);
+
+        $foto = $request->file('foto');
+        if($foto) {
+            $nombre = $post->id . '.' . $foto->extension();
+            $foto->storeAs('public/posts/fotos', $nombre);
+            $post->foto = $nombre; //'/storage/...  ->   /storage/public/...'
+            $post->save();
+        }
 
         return redirect()->route('lista-posts');
     }
@@ -61,10 +70,18 @@ class AdminPosts extends Controller
                 'titulo' => 'required|max:100',
                 'bajada' => 'required',
                 'texto' => 'required',
+                'foto' => 'nullable|image'
             ]
         );
 
         $post->fill($request->all());
+
+        $foto = $request->file('foto');
+        if($foto) {
+            $nombre = $post->id . '.' . $foto->extension();
+            $foto->storeAs('public/posts/fotos', $nombre);
+            $post->foto = $nombre; //'/storage/...  ->   /storage/public/...'
+        }
 
         $post->save();
 
